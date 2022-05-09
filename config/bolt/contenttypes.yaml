@@ -53,7 +53,35 @@ homepage:
 # belong together. If your site has a 'services' section, in which you'd like to
 # list the different types of services a company provides, you can group these
 # together.
-
+branches:
+    name: branches
+    singular_name: branche
+    fields:
+        title:
+            type: text
+            class: large
+            group: content
+        teaser:
+            type: textarea
+            postfix: |
+                A text-only version of the content, that can be used to "tease"
+                the content when it's used in listing pages or search results.
+        image:
+            type: image
+            label: Highlighted image
+        body:
+            type: redactor
+            height: 300px
+        slug:
+            type: slug
+            uses: title
+            group: Meta
+        template:
+            type: templateselect
+            filter: '/^[^_].*\.twig$/'
+    taxonomy: [ tags, groups , categories]
+    records_per_page: 5
+    order: id
 pages:
     name: Pages
     singular_name: Page

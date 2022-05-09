@@ -1,8 +1,6 @@
 {
-    "name": "bolt/project",
     "type": "project",
-    "description": "Bolt 5 standard project skeleton",
-    "license": "MIT",
+    "license": "proprietary",
     "require": {
         "php": ">=7.2.9 || ^8.0",
         "bobdenotter/configuration-notices": "^1.2",
